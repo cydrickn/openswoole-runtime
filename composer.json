@@ -1,7 +1,7 @@
 {
-    "name": "cydrickn/runtime",
+    "name": "cydrickn/swoole-runtime",
     "version": "0.1.0",
-    "description": "Symfony Runtime",
+    "description": "Swoole / Openswoole Runtime",
     "type": "library",
     "require": {
         "symfony/runtime": "^7.2",
