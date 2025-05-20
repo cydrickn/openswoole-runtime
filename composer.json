@@ -1,0 +1,35 @@
+{
+    "name": "cydrickn/runtime",
+    "version": "0.1.0",
+    "description": "Symfony Runtime",
+    "type": "library",
+    "require": {
+        "symfony/runtime": "^7.2",
+        "openswoole/core": "^22.2",
+        "runtime/swoole": "^0.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cydrickn\\Runtime\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cydrick Nonog",
+            "email": "cydrick.dev@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true
+        }
+    },
+    "require-dev": {
+        "symfony/http-foundation": "^7.2",
+        "symfony/http-kernel": "^7.2",
+        "openswoole/ide-helper": "~22.0.1"
+    },
+    "suggest": {
+        "cydrickn/php-watcher": "Allows to hot reload when any part of the code have been change"
+    }
+}
