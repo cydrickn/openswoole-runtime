@@ -1,6 +1,5 @@
 {
     "name": "cydrickn/swoole-runtime",
-    "version": "0.1.0",
     "description": "Swoole / Openswoole Runtime",
     "type": "library",
     "require": {
