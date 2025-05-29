@@ -31,7 +31,7 @@ class ServerFactory extends SwooleServerFactory
         $options['port'] = $options['port'] ?? $_SERVER['SWOOLE_PORT'] ?? $_ENV['SWOOLE_PORT'] ?? self::DEFAULT_OPTIONS['port'];
         $options['mode'] = $options['mode'] ?? $_SERVER['SWOOLE_MODE'] ?? $_ENV['SWOOLE_MODE'] ?? self::DEFAULT_OPTIONS['mode'];
         $options['sock_type'] = $options['sock_type'] ?? $_SERVER['SWOOLE_SOCK_TYPE'] ?? $_ENV['SWOOLE_SOCK_TYPE'] ?? self::DEFAULT_OPTIONS['sock_type'];
-        $options['hot_reload'] = $options['hot_reload'] ?? $_SERVER['SWOOLE_HOT_RELOAD'] ?? $_ENV['SWOOLE_HOT_RELOAD'] ?? self::DEFAULT_OPTIONS['hot_reload'];
+        $options['hot_reload'] = (int) ($options['hot_reload'] ?? $_SERVER['SWOOLE_HOT_RELOAD'] ?? $_ENV['SWOOLE_HOT_RELOAD'] ?? self::DEFAULT_OPTIONS['hot_reload']);
         $options['base_path'] = $options['base_path'] ?? $_SERVER['SWOOLE_BASE_PATH'] ?? $_ENV['SWOOLE_BASE_PATH'] ?? self::DEFAULT_OPTIONS['base_path'];
 
         parent::__construct($options);
