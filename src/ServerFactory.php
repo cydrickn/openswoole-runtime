@@ -40,7 +40,9 @@ class ServerFactory extends SwooleServerFactory
     public function createServer(callable $requestHandler): Server
     {
         $options = $this->getOptions();
+        \OpenSwoole\Runtime::enableCoroutine(true, \OpenSwoole\Runtime::HOOK_ALL);
         $server = new Server($options['host'], (int) $options['port'], (int) $options['mode'], (int) $options['sock_type']);
+        \OpenSwoole\Runtime::enableCoroutine(true, \OpenSwoole\Runtime::HOOK_ALL);
         $server->set($options['settings']);
         $server->on('request', $requestHandler);
 
